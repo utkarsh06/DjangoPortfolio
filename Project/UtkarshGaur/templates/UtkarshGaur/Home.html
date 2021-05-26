@@ -1,10 +1,9 @@
 {%include "UtkarshGaur/NavBar.html" %}
 
 
-<head>
-
-</head>
 
 <div class = "container">
-    <div><h1>  </h1></div>
+    {% for job in jobs %}
+    <div><h1>  {{ job.summary }} </h1></div>
+    {% endfor %}
 </div>
