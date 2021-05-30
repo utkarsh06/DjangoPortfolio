@@ -1,9 +1,133 @@
-{%include "UtkarshGaur/NavBar.html" %}
+{% load static %}
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+{% include "UtkarshGaur/NavBar.html" %}
+<body>
+    <main role ="main">
+
+        <div class = "parallax">
+          
+                <div class="typing-container" style= "font-family: 'Roboto', sans-serif;">
+                      <div class = "container">
+                        <h1>Utkarsh Gaur</h1>
+                        <h2>I am a <span id="sentence" class="sentence"></span></h2>
+                        <span class="input-cursor"></span>
+                      </div>
+                </div>
+                <div class = "justify-content-center"> 
+                  test
+                </div>
+            
+          
+        </div>
+    </main>
+</body>
+
+
+<style>
+    .parallax {
+      /* The image used */
+      background-image: url("{% static '/images/diego-ph-fIq0tET6llw-unsplash.jpg' %}");
+    
+      /* Set a specific height */
+      min-height: 550px;
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .typing-container {
+        display: flex -ms-flexbox ;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        
+    }
+    .input-cursor {
+        display: inline-block;
+        width: 2px;
+        height: ;
+        background-color: rgb(19, 17, 17);
+        margin-left: 8px;
+    }
 
 
 
-<div class = "container">
-    {% for job in jobs %}
-    <div><h1>  {{ job.summary }} </h1></div>
-    {% endfor %}
-</div>
+    
+    @keyframes blink {
+        0% {opacity: 1;}
+        40% {opacity: 1;}
+        60% {opacity: 0;}
+        100% {opacity: 0;}
+      }
+    
+    .input-cursor { 
+      animation: blink .6s linear infinite alternate;
+    }
+    </style>
+    
+    <script>
+      async function typeSentence(sentence, eleRef, delay = 100) {
+        const letters = sentence.split("");
+        let i = 0;
+        while(i < letters.length) {
+          await hold(delay);
+          $(eleRef).append(letters[i]);
+          i++
+        }
+        return;
+    }
+    
+    
+      function hold(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms))
+      }
+    
+    
+      async function deleteSentence(eleRef) {
+        const sentence = $(eleRef).html();
+        const letters = sentence.split("");
+        let i = 0;
+        while(letters.length > 0) {
+          await hold(100);
+          letters.pop();
+          $(eleRef).html(letters.join(""));
+        }
+      }
+    
+    
+    
+      const carouselText = [
+        {text: "Software Engineer.", color: "#49516E"},
+        {text: "Technology enthusiast.", color: "#49516E"},
+        {text: "Foodie.", color: "#49516E"}
+      ]
+    
+      async function carousel(carouselList, eleRef) {
+          var i = 0;
+          while(true) {
+            changeFontC(eleRef, carouselList[i].color)
+            await typeSentence(carouselList[i].text, eleRef);
+            await hold(1200);
+            await deleteSentence(eleRef);
+            await hold(500);
+            i++
+            if(i >= carouselList.length) {i = 0;}
+          }
+      }
+      function changeFontC(eleRef, color) {
+        $(eleRef).css('color', color);
+      }
+    
+      carousel(carouselText, "#sentence");  
+    
+    </script>
+    

@@ -6,7 +6,7 @@ from .models import Job
 
 def home(request):
     jobs = Job.objects
-    return render(request, 'UtkarshGaur/Home.html', {'jobs':jobs})
+    return render(request, 'UtkarshGaur/Home.html', context={'jobs':jobs})
 
 def about(request):
     return render(request, 'UtkarshGaur/About.html' )
