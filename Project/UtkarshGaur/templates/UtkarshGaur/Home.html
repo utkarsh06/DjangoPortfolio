@@ -4,6 +4,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://use.fontawesome.com/d607609cf2.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
 </head>
 
 {% include "UtkarshGaur/NavBar.html" %}
@@ -11,23 +15,46 @@
     <main role ="main">
 
         <div class = "parallax">
-          
-                <div class="typing-container" style= "font-family: 'Roboto', sans-serif;">
-                      <div class = "container">
-                        <h1>Utkarsh Gaur</h1>
-                        <h2>I am a <span id="sentence" class="sentence"></span></h2>
-                        <span class="input-cursor"></span>
-                      </div>
-                </div>
-                <div class = "justify-content-center"> 
-                  test
-                </div>
-            
-          
+          <br><br><br><br><br><br><br>
+          <div class="typing-container" style= "font-family: 'Roboto', sans-serif;">
+            <div class = "container">
+              <h1>Utkarsh Gaur</h1>
+              <h2>I am a <span id="sentence" class="sentence"></span></h2>
+              <span class="input-cursor"></span>
+            </div>
+          </div>
+          <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+              <!-- Twitter -->
+              <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/TechbyUT?s=08" role="button"
+                ><i class="fab fa-twitter"></i
+              ></a>
+        
+              <!-- Google -->
+              <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-google"></i
+              ></a>
+        
+              <!-- Instagram -->
+              <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com/tech.by.ut?utm_medium=copy_link" role="button"
+                ><i class="fab fa-instagram"></i
+              ></a>
+        
+              <!-- Linkedin -->
+              <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/utkarsh-gaur/" role="button"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+        
+              <!-- Github -->
+              <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/utkarsh06" role="button"
+                ><i class="fab fa-github"></i
+              ></a>
+            </section>
+            <!-- Section: Social media -->
         </div>
     </main>
 </body>
-
 
 <style>
     .parallax {
@@ -72,9 +99,9 @@
     .input-cursor { 
       animation: blink .6s linear infinite alternate;
     }
-    </style>
+</style>
     
-    <script>
+<script>
       async function typeSentence(sentence, eleRef, delay = 100) {
         const letters = sentence.split("");
         let i = 0;
@@ -129,5 +156,4 @@
     
       carousel(carouselText, "#sentence");  
     
-    </script>
-    
+</script>
