@@ -7,13 +7,11 @@
     <script src="https://use.fontawesome.com/d607609cf2.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-
 </head>
 
 {% include "UtkarshGaur/NavBar.html" %}
 <body>
     <main role ="main">
-
         <div class = "parallax">
           <br><br><br><br><br><br><br>
           <div class="typing-container" style= "font-family: 'Roboto', sans-serif;">
@@ -53,8 +51,30 @@
             </section>
             <!-- Section: Social media -->
         </div>
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              {% for job in jobs.all %}
+                <div class="col">
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src = "{{ job.image.url }}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ job.title }}</h5>
+                      <p class="card-text">{{ job.summary }}</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
     </main>
+    
+
+    
 </body>
+
 
 <style>
     .parallax {
