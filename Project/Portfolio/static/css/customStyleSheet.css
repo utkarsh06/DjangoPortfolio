@@ -1,0 +1,44 @@
+{% load static %}
+
+.parallax {
+/* The image used */
+background-image: url("{% static '/images/diego-ph-fIq0tET6llw-unsplash.jpg' %}");
+
+/* Set a specific height */
+min-height: 550px;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.typing-container {
+    display: flex -ms-flexbox ;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    
+}
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 30;
+    background-color: rgb(19, 17, 17);
+    margin-left: 8px;
+}
+
+
+
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.input-cursor { 
+animation: blink .6s linear infinite alternate;
+}

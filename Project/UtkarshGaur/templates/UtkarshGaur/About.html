@@ -1,177 +1,154 @@
 {% load static %}
-<head>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <!--Includes HTTP:/HTTPS: is compatible for Chrome/FireFox -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-</head>
-
-<head>
-    <link href='https://fonts.googleapis.com/css?family=Khula:700' rel='stylesheet' type='text/css'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
-</head>
-
 {% include "UtkarshGaur/NavBar.html" %}
 
-<div class="parallax-container">
-    <div class="parallax">
-        <img src="{%static 'media\AboutUs.jpg' %}" class = "responsive-img">
-           
-                
-    </div>
-</div>
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://use.fontawesome.com/d607609cf2.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
 
-<div class = "writingSection">
-    <div class = "container" >
-        <h4 class="" style="text-align:left;"><strong><font color="#a82e2e">Get to know more about us...</font></strong></h4>
-        <hr>
-        <div class = "">
-            <p style = "font-family: 'Times New Roman', Times, serif" >
-                <font size = "4">
-                    If you’re looking for a private, in-home or online tutoring service in Bergen County NJ, Rockland County NY or pretty much anywhere, we’re glad you found us! Ivy Tutoring Service should be your first choice for quality in home or online tutoring. 
-                    <br>
-                    We provide tutoring services for students of all ages, Pre-K through adult. We strive to excite our students about the learning process, foster curiosity, and build essential skills for academic success.  We can help frustrated and overwhelmed students (and their parents) pave the way to lifelong learning and success or provide stimulating Enrichment Programs in all academic studies to pave the way for continuous self-improvement for students who need a challenge.                    
-                    <br>
-                </font>
-            </p>  
+<body>
+    <main role ="main">
+        <div class = "parallax">
+            <br><br><br><br><br><br><br>
+            <div class="typing-container" style= "font-family: 'Roboto', sans-serif;">
+                <div class = "container">
+                  <center><h1 style ="color:aliceblue;">Be</h1></center>
+                  <center><h2><span id="sentence" class="sentence"></span><span class="input-cursor"></span></h2></center>
+                </div>
+            </div>
         </div>
-        <hr>
-        <h4 class="" style="text-align:left;"><font color="black">Our tutors </font></h4>
-        
-        <div class = "">
-        <p style = "font-family: 'Times New Roman', Times, serif"></p>
-            <font size = "4" style = "font-family: 'Times New Roman', Times, serif" ;>
-                A strong rapport between tutor and student is essential. Our state-certified and professional teachers are carefully selected from among the brightest in their fields ... including highly qualified reading specialists and special education teachers. They are caring, supportive people who instill confidence and motivate students to excel in the classroom. We match students with a tutor based on their academic needs as well as their personality and learning style.  Our tutors have experience in providing one-on-one instruction in Math, English, Science, History, Foreign Languages as well as COOP, HSPT, TACHS, SAT and ACT test prep.  In addition to core subjects, our tutors can provide academic coaching and help your child learn crucial organizational strategies and study skills that help performance in all areas. 
-
-                <br>
-                Tutoring is more than just reteaching: it is an opportunity to transform students’ beliefs about themselves and turn them into strong, motivated, lifelong learners.
-            </font>
-        </p>
-        </div> 
-        <hr>
-        <h4 class="" style="text-align:left;"><font color="black">Our director </font></h4>
-        <div>
-            <div class="row">        
-                <div class="col-md-6 col-xs-6 text-right" style = "padding-left: 22px;">
-                    <div class="card" style="width: 21rem; ">
-                        <img class="card-img-top" src="{%static 'media\MelissaFrankProfile.jpg' %}"  alt="Card image cap"/>
-                        <div class="card-body" >
-                            <p class="card-text">
-                              <h4 class="" style="text-align:center;"><strong><font color="Black">Melissa Frank</font></strong></h4>
-                            </p>
-                        </div>
-
-                      </div>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col">
+                    <br>
+                    <img class= "img-fluid" src = "{% static 'images/Utkarsh_Gaur.png' %}"   >
                 </div>
-                <div class="col-md-6 col-xs-6" >
-                  <p style = "font-family: Comic Sans ">
-                    <font size = "4" >
-                        I have always had a passion to educate young minds and help them blossom into well-rounded, responsible and successful individuals. Throughout my 29 years of teaching, I have had wonderful opportunities to teach diverse groups of students, including those with learning differences, those who performed at grade level and those who were gifted. As a result, I have become proficient at designing creative and stimulating lesson plans, which accommodate multiple intelligences, bring a hands-on approach to learning and keep students interested and focused. <br> <br>
-
-                        My greatest desire is to inspire and motivate students. I actively engage each student by incorporating a variety of manipulatives, enjoyable activities and cooperative learning projects. I tailor lesson plans to meet their diverse interests, as well as demonstrate direct connections between the classroom and everyday life. The lessons I provide students support strong literacy skills and  I try to ensure each student become a proficient reader, writer, speaker and a lifelong learner. <br> <br>
-                        
-                        Having been an Education Major at St. Thomas Aquinas College in Sparkill NY, I am a certified elementary education teacher in NJ and NY. I hold a M.A. in Educational Leadership and Supervision from St. Peter’s University and I have successfully completed the Orton Gillingham Program at Fairleigh Dickinson University. I am constantly looking for new approaches to reach all students and develop each one into a strong reader. <br> <br>
-                        
-                        
-                    </font>
-                </p>
+                <div class = "col">
+                    <stong><h2 style ="color:brown;">More about me</h2></stong>
+                    <hr>
+                    <p>
+                        Utkarsh is a Computer Science and Applied Mathematics double major with a passion to learn. He has experience in Full Stack Development, API Development, Machine learning, and Data Analysis accumulated through years of work and course projects.
+                        <br>Along with being a high achieving scholar with a CGPA of 3.88, Utkarsh is also currently serving as the President of Computer Science Developers Club, RU-N.
+                    </p>
                 </div>
-                
-
-                <div class="row">
-                    <div class="col-sm-6">
-                      <div class="card">
-                        <div class="card-body"style = "padding-bottom: 22px;" >
-                          <h5 class="card-title" style="text-align:center;" ><strong><font color="Black">Certification</font></strong></h5>
-                          <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                New York and New Jersey Certified Elementary Education Teacher <br> <br>
-                            </li>
-                            <li class="list-group-item">
-                               Orton Gillingham Teacher <br> <br>
-                            </li>
-                            <li class="list-group-item">
-                                IMSLEC Certified <br>
-                            </li>
-                      </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="card">
-                        <div class="card-body" style = "padding-bottom: 0px;">
-                            <h5 class="card-title" style="text-align:center;" ><strong><font color="Black">Education</font></strong></h5>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    Orton Gillingham Teacher Levels 1, 2, 3 & 4: <br>
-                                            Fairleigh Dickenson University, Teaneck NJ; May 2017
-                                </li>
-                                <li class="list-group-item">
-                                            Master of Art in Educational Supervision/Leadership: <br>
-                                            St. Peter’s University Jersey City, NJ; May 1998.
-                                </li>
-                                <l1 class = "list-group-item">
-                                    Bachelor of Science in Elementary Education: <br>
-                                    St. Thomas Aquinas College, Sparkill, NY; May 1992
-                                </l1>
-                                
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-           </div>
+            </div>
+            <div class = "row">
+                <div class = "col">
+                    <hr>
+                </div>
+            </div>
         </div>
 
-        <hr>
+    </main>
+</body>
 
 
-    </div>
-</div>
 
 {%include "UtkarshGaur/Footer.html" %}
 
-<script>
-    $(document).ready(function(){
-        $('.parallax').parallax();
-    });
-      var textWrapper = document.querySelector('.ml131');
-      textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-    
-      anime.timeline({loop: false})
-        .add({
-          targets: '.ml131 .letter',
-          translateY: [100,0],
-          translateZ: 0,
-          opacity: [0,1],
-          easing: "easeOutExpo",
-          duration: 6000,
-          delay: (el, i) => 300 + 30 * i
-        })
-    </script>
-   
+
 <style>
+    .parallax {
+      /* The image used */
+      background-image: url("{% static '/images/clement-helardot-95YRwf6CNw8-unsplash.jpg' %}");
     
-.ml131{
-        position:absolute;
-        font-size: 6em;
-        color:black;
-        letter-spacing:1px;
-        width:100%;
-        text-align:center;
-        top:40%;
+      /* Set a specific height */
+      min-height: 550px;
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
-.letter{
-    font-family:emoji;
-}
-.parallax-container {
-    position: relative;
-    overflow: hidden;
-    height: 500px;
-    width: 100%;
-}
+    .typing-container {
+        display: flex -ms-flexbox ;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+  
+        
+    }
+    .input-cursor {
+        display: inline-block;
+        width: 2px;
+        height: 30;
+        background-color: rgb(19, 17, 17);
+        margin-left: 8px;
+    }
+  
+  
+  
+    
+    @keyframes blink {
+        0% {opacity: 1;}
+        40% {opacity: 1;}
+        60% {opacity: 0;}
+        100% {opacity: 0;}
+      }
+    
+    .input-cursor { 
+      animation: blink .6s linear infinite alternate;
+    }
 </style>
+  
+      
+  <script>
+        async function typeSentence(sentence, eleRef, delay = 100) {
+          const letters = sentence.split("");
+          let i = 0;
+          while(i < letters.length) {
+            await hold(delay);
+            $(eleRef).append(letters[i]);
+            i++
+          }
+          return;
+      }
+      
+      
+        function hold(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms))
+        }
+      
+      
+        async function deleteSentence(eleRef) {
+          const sentence = $(eleRef).html();
+          const letters = sentence.split("");
+          let i = 0;
+          while(letters.length > 0) {
+            await hold(100);
+            letters.pop();
+            $(eleRef).html(letters.join(""));
+          }
+        }
+      
+      
+      
+        const carouselText = [
+          {text: "Creative.", color: "#d9d932"},
+          {text: "Humble.", color: "#40d932"},
+          {text: "Passionate.", color: "#0f7d05"}
+        ]
+      
+        async function carousel(carouselList, eleRef) {
+            var i = 0;
+            while(true) {
+              changeFontC(eleRef, carouselList[i].color)
+              await typeSentence(carouselList[i].text, eleRef);
+              await hold(1200);
+              await deleteSentence(eleRef);
+              await hold(500);
+              i++
+              if(i >= carouselList.length) {i = 0;}
+            }
+        }
+        function changeFontC(eleRef, color) {
+          $(eleRef).css('color', color);
+        }
+      
+        carousel(carouselText, "#sentence");  
+      
+</script>

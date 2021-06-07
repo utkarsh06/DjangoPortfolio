@@ -13,15 +13,14 @@
 <body>
     <main role ="main">
         <div class = "parallax">
-          <br><br><br><br><br><br><br>
-          <div class="typing-container" style= "font-family: 'Roboto', sans-serif;">
-            <div class = "container">
-              <h1>Utkarsh Gaur</h1>
-              <h2>I am a <span id="sentence" class="sentence"></span></h2>
-              <span class="input-cursor"></span>
+            <br><br><br><br><br><br><br>
+            <div class="typing-container" style= "font-family: 'Roboto', sans-serif;">
+              <div class = "container">
+                <h1>Utkarsh Gaur</h1>
+                <h2>I am a <span id="sentence" class="sentence"></span><span class="input-cursor"></span></h2>
+              </div>
             </div>
-          </div>
-          <div class="container p-4">
+            <div class="container p-4">
             <!-- Section: Social media -->
             <section class="mb-4">
               <!-- Twitter -->
@@ -50,18 +49,20 @@
               ></a>
             </section>
             <!-- Section: Social media -->
+          </div>
         </div>
         <div class="album py-5 bg-light">
           <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               {% for job in jobs.all %}
                 <div class="col">
-                  <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src = "{{ job.image.url }}" alt="Card image cap">
+                  <div class="card 
+                  " style="width: 22rem;">
+                    <img class="card-img-top" src = "{{ job.image.url }}" alt="Card image cap" style = "width: 350; height: 200;" >
                     <div class="card-body">
                       <h5 class="card-title">{{ job.title }}</h5>
                       <p class="card-text">{{ job.summary }}</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <a href="#" class="btn btn-primary">View project</a>
                     </div>
                   </div>
                 </div>
@@ -71,56 +72,57 @@
         </div>
     </main>
     
-    {%include "UtkarshGaur/Footer.html" %}
+  {%include "UtkarshGaur/Footer.html" %}
 
     
 </body>
 
 
 <style>
-    .parallax {
-      /* The image used */
-      background-image: url("{% static '/images/diego-ph-fIq0tET6llw-unsplash.jpg' %}");
-    
-      /* Set a specific height */
-      min-height: 550px;
-    
-      /* Create the parallax scrolling effect */
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .typing-container {
-        display: flex -ms-flexbox ;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
+  .parallax {
+    /* The image used */
+    background-image: url("{% static '/images/diego-ph-fIq0tET6llw-unsplash.jpg' %}");
+  
+    /* Set a specific height */
+    min-height: 550px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .typing-container {
+      display: flex -ms-flexbox ;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
 
-        
-    }
-    .input-cursor {
-        display: inline-block;
-        width: 2px;
-        height: ;
-        background-color: rgb(19, 17, 17);
-        margin-left: 8px;
-    }
+      
+  }
+  .input-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 30;
+      background-color: rgb(19, 17, 17);
+      margin-left: 8px;
+  }
 
 
 
-    
-    @keyframes blink {
-        0% {opacity: 1;}
-        40% {opacity: 1;}
-        60% {opacity: 0;}
-        100% {opacity: 0;}
-      }
-    
-    .input-cursor { 
-      animation: blink .6s linear infinite alternate;
+  
+  @keyframes blink {
+      0% {opacity: 1;}
+      40% {opacity: 1;}
+      60% {opacity: 0;}
+      100% {opacity: 0;}
     }
+  
+  .input-cursor { 
+    animation: blink .6s linear infinite alternate;
+  }
 </style>
+
     
 <script>
       async function typeSentence(sentence, eleRef, delay = 100) {
