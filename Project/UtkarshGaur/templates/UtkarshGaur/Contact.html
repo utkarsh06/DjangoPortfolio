@@ -9,5 +9,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
+<body>
+    <main role ="main">
+        <div class = "parallax">
+            <br><br><br><br><br><br><br>
+            <div class="typing-container" style= "font-family: 'Roboto', sans-serif;">
+                <div class = "container">
+                  <center><h1 style ="color:aliceblue;">Contact me</h1></center>
+                </div>
+            </div>
+        </div>
+</body>
 
+<style>
+    .parallax {
+      /* The image used */
+      background-image: url("{% static '/images/mathyas-kurmann-fb7yNPbT0l8-unsplash.jpg' %}");
+    
+      /* Set a specific height */
+      min-height: 550px;
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .typing-container {
+        display: flex -ms-flexbox ;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+  
+        
+    }
+    .input-cursor {
+        display: inline-block;
+        width: 2px;
+        height: 30;
+        background-color: rgb(19, 17, 17);
+        margin-left: 8px;
+    }
+  
+  
+  
+    
+    @keyframes blink {
+        0% {opacity: 1;}
+        40% {opacity: 1;}
+        60% {opacity: 0;}
+        100% {opacity: 0;}
+      }
+    
+    .input-cursor { 
+      animation: blink .6s linear infinite alternate;
+    }
+</style>
+{%include "UtkarshGaur/Footer.html" %}
 
