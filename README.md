@@ -37,4 +37,3 @@ source env/bin/activate
 
 ## Contributing
 
-## License
