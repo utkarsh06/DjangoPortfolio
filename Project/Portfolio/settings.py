@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+import logging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -145,11 +146,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #test email settings
-#EMAIL_HOST = 'localhost'
-#EMAIL_PORT = '1025'
-#EMAIL_HOST_USER = ''
-#EMAIL_HOST_PASSWORD = ''
-#EMAIL_USE_TLS = False
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+""" EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = '' """
+
 
 # EMAIL_USE_SSL = false
+
+
+#SendGrid
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
+
+print("testing the api")
+print(os.environ.get("SENDGRID_API_KEY"))
+SENDGRID_ECHO_TO_STDOUT=True
+SENDGRID_SANDBOX_MODE_IN_DEBUG=False
