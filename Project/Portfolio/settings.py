@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 import logging
+from dotenv import load_dotenv
+# take environment variables from .env.
+load_dotenv()
+
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -159,8 +165,8 @@ EMAIL_HOST_PASSWORD = '' """
 #SendGrid
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
-
-print("testing the api")
-print(os.environ.get("SENDGRID_API_KEY"))
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 SENDGRID_ECHO_TO_STDOUT=True
 SENDGRID_SANDBOX_MODE_IN_DEBUG=False

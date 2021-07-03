@@ -25,11 +25,11 @@ def contact(request):
             sender = form.cleaned_data['sender']
             cc_myself = form.cleaned_data['cc_myself']
 
-            recipients = ['utgr0607@gmail.com']
+            recipients = ['uthebest0607@gmail.com']
 
             if(cc_myself):
                 recipients.append(sender)
-            send_mail(subject,message,sender,recipients)
+            send_mail(subject,message,'utgr0607@gmail.com',recipients)
             return HttpResponseRedirect('/thanks')
     else:
         form = MessageForm
