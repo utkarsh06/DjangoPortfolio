@@ -20,9 +20,10 @@
             </div>
         </div>
         <div>
+          {% load crispy_forms_tags %}
           <form action= "{% url 'contact' %}" method="post">
             {% csrf_token %}
-            {{ form }}
+            {{ form|crispy}}
             <input type="submit" value="Submit">
         </form>
 

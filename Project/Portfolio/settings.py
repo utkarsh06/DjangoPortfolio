@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'UtkarshGaur',
 
 ]
@@ -163,10 +164,13 @@ EMAIL_HOST_PASSWORD = '' """
 
 
 #SendGrid
-EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
+SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+
 EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
+EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-SENDGRID_ECHO_TO_STDOUT=True
-SENDGRID_SANDBOX_MODE_IN_DEBUG=False
+
+#Crispy template
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

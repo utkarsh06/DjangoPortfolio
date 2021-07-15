@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Job
 from .forms import MessageForm
+from django.conf import settings
+
 # Create your views here.
 
 
@@ -25,11 +27,11 @@ def contact(request):
             sender = form.cleaned_data['sender']
             cc_myself = form.cleaned_data['cc_myself']
 
-            recipients = ['uthebest0607@gmail.com']
+            recipients = ['uthebest0607@gmail.com','utkarsh.gaur06gmail.com']
 
             if(cc_myself):
                 recipients.append(sender)
-            send_mail(subject,message,'utgr0607@gmail.com',recipients)
+            send_mail(subject,message,settings.CONTACT_EMAIL,recipients)
             return HttpResponseRedirect('/thanks')
     else:
         form = MessageForm
